@@ -1,1 +1,99 @@
-@import './assets/css/clear.css', './assets/css/parallax.scss';
+@import './assets/css/clear.scss', './assets/templates/space/space.scss';
+
+.clock{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.clock__wrapper {
+  width: 350px;
+  height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(./assets/image/clock.png),
+    url(./assets/image/js.png),
+    radial-gradient(circle, rgb(37, 73, 90) 0%, rgb(25, 48, 60) 11%, rgba(9,25,33,1) 38%);
+  background-size: cover;
+  border-radius: 50%;
+  box-shadow: 0 -15px 15px rgba(134, 134, 134, .35),
+    inset 0 -15px 15px #191919,
+    0 15px 15px rgba(163, 162, 162, .35),
+    inset 0 15px 15px #191919;
+}
+
+.clock__wrapper:before {
+  content: '';
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  z-index: 999;
+}
+
+.clock__hour,
+.clock__min,
+.clock__sec {
+  position: absolute;
+}
+
+.clock__hour,
+.clock__arrow-hr {
+  width: 160px;
+  height: 160px;
+}
+.clock__min,
+.clock__arrow-mn {
+  width: 190px;
+  height: 190px;
+}
+.clock__sec,
+.clock__arrow-sc{
+  width: 230px;
+  height: 230px;
+}
+
+.clock__arrow-hr,
+.clock__arrow-mn,
+.clock__arrow-sc {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.clock__arrow-hr:before {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 80px;
+  background-color: #ffc600;
+  z-index: 10;
+  border-radius: 6px 6px 0 0;
+}
+
+.clock__arrow-mn:before {
+  content: '';
+  position: absolute;
+  width: 4px;
+  height: 90px;
+  background-color: #fff;
+  z-index: 11;
+  border-radius: 6px 6px 0 0;
+}
+
+.clock__arrow-sc:before {
+  content: '';
+  position: absolute;
+  width: 2px;
+  height: 150px;
+  background-color: #fff;
+  z-index: 12;
+  border-radius: 6px 6px 0 0;
+}
