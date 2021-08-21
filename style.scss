@@ -1,8 +1,8 @@
 @import './assets/css/clear.scss', './assets/templates/space/space.scss';
 
-.clock{
+.clock {
   position: absolute;
-  top: 50%;
+  top: 60%;
   left: 50%;
   transform: translate3d(-50%, -50%, 0);
   display: flex;
@@ -97,3 +97,5 @@
   z-index: 12;
   border-radius: 6px 6px 0 0;
 }
+
+@import './components/citiesClock.scss';
