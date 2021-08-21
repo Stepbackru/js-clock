@@ -60,17 +60,14 @@ const cityClockTemplate = (theme, cities) => {
             {
               el: 'p',
               classNames: 'info__item',
-              text: langStore === 'en' ? `${cities.city_en}` : `${cities.city_ru}`,
+              text: langStore === 'en' ? `${cities.city_en.toUpperCase()}` : `${cities.city_ru}`,
             },
             {
               el: 'p',
-              classNames: 'info__item',
-              text: langStore === 'en' ? `${cities.country_en}` : `${cities.country_ru}`,
-            },
-            {
-              el: 'p',
-              classNames: 'info__item',
-              text: `GMT ${cities.utcTime < 0 ? cities.utcTime : `+${cities.utcTime}`}`,
+              classNames: 'info__item info__country',
+              text: langStore === 'en' ? 
+                `${cities.country_en} (GMT ${cities.utcTime < 0 ? cities.utcTime : `+${cities.utcTime}`})` : 
+                `${cities.country_ru} (GMT ${cities.utcTime < 0 ? cities.utcTime : `+${cities.utcTime}`})`,
             },
           ]
         }
