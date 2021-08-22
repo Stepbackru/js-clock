@@ -1,14 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 .cities {
+  max-width: 1200px;
+  height: 300px;
   position: absolute;
-  top: 15%;
+  top: 10%;
   left: 50%;
   transform: translate3d(-50%, 0, 0);
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 20px;
+
+  @media (max-width: 1199px) {
+    max-width: 500px;
+    overflow-x: hidden;
+  }
+
+  @media (max-width: 520px) {
+    max-width: 160px;
+    overflow-x: hidden;
+  }
 
   &__item {
     display: flex;
