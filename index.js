@@ -1,6 +1,7 @@
 import mainClocks from './components/mainClocks.js';
 import cityBlock from './components/cityBlock.js';
 import citiesClocks from './components/citiesClocks/citiesClocks.js';
+import showDateGreating from './components/showDateGreating/showDateGreating.js';
 
 class MainPage {
   
@@ -8,11 +9,13 @@ class MainPage {
     cityBlock.render();
     mainClocks.render();
     citiesClocks.render();
+    showDateGreating.render();
   }
 
   subscribe() {
     mainClocks.subscribe();
     citiesClocks.subscribe();
+    showDateGreating.subscribe();
   }
 }
 
