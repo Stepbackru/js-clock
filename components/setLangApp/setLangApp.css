@@ -1,0 +1,35 @@
+.lang {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+  position: absolute;
+  bottom: 15%;
+  left: 50%;
+  -webkit-transform: translate3d(-50%, 0, 0);
+          transform: translate3d(-50%, 0, 0);
+}
+
+.lang__btn {
+  width: 80px;
+  height: 30px;
+  font-family: 'Roboto', sans-serif;
+  color: #ffc600;
+  font-size: 16px;
+  text-align: center;
+  border-radius: 10px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#25495a), color-stop(20%, #19303c), color-stop(38%, #091921));
+  background: linear-gradient(180deg, #25495a 0%, #19303c 20%, #091921 38%);
+}
+
+.lang__btn:hover, .lang__btn:active {
+  -webkit-box-shadow: 1px 1px 1px 0px #000000, inset 1px 1px 7px 0px #000000, inset 0px 0px 6px 7px rgba(0, 0, 0, 0.7);
+          box-shadow: 1px 1px 1px 0px #000000, inset 1px 1px 7px 0px #000000, inset 0px 0px 6px 7px rgba(0, 0, 0, 0.7);
+}
+
+.lang__btn_active {
+  pointer-events: none;
+  -webkit-box-shadow: 1px 1px 1px 0px #000000, inset 1px 1px 7px 0px #000000, inset 0px 0px 6px 7px rgba(0, 0, 0, 0.7);
+          box-shadow: 1px 1px 1px 0px #000000, inset 1px 1px 7px 0px #000000, inset 0px 0px 6px 7px rgba(0, 0, 0, 0.7);
+}
+/*# sourceMappingURL=setLangApp.css.map */
