@@ -19,10 +19,20 @@ class ShowDateGreating {
     this.today = this.elements.find((el) => el.className === 'date__today');
   }
   
+  destroy(){
+    this.elements.forEach((el) => el.remove());
+    this.elements = [];
+    this.greating = null;
+    this.time = null;
+    this.today = null;
+  }
+  
   subscribe() {
     this.getToday();
     this.setGreating();
+    
     this.getTime();
+    setTimeout(this.getTime, 1000);
   }
 
   getToday() {
@@ -83,16 +93,14 @@ class ShowDateGreating {
   }
 
   getTime() {
-    setTimeout(() => {
-      const today = new Date();
-      const hour = today.getHours();
-      const min = today.getMinutes();
-      const sec = today.getSeconds();
-    
-      this.time.textContent = `${this.addZero(hour)}:${this.addZero(min)}:${this.addZero(sec)}`;
+    const today = new Date();
+    const hour = today.getHours();
+    const min = today.getMinutes();
+    const sec = today.getSeconds();
+  
+    this.time.textContent = `${this.addZero(hour)}:${this.addZero(min)}:${this.addZero(sec)}`;
 
-      requestAnimationFrame(this.getTime);
-    }, 1000);
+    requestAnimationFrame(this.getTime);
   }
 
   addZero(n) {
