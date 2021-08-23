@@ -30,6 +30,11 @@ body {
     inset 0 -15px 15px #191919,
     0 15px 15px rgba(163, 162, 162, .35),
     inset 0 15px 15px #191919;
+
+  @media (max-width: 520px) {
+    width: 300px;
+    height: 300px;
+  }
 }
 
 .clock__wrapper:before {
