@@ -20,6 +20,7 @@ class ShowDateGreating {
   subscribe() {
     this.getToday();
     this.setGreating();
+    this.getTime();
   }
 
   getToday() {
@@ -72,8 +73,27 @@ class ShowDateGreating {
 
   setGreating() {
     const langStore = localStorage.getItem(`lang`);
+    const userNameStore = localStorage.getItem(`username`);
+
     this.greating.textContent = 
-    `${langStore === 'en' ? 'Good' : ''} ${this.getTimeOfDay()}, ${'username'}.`;
+    `${langStore === 'en' ? 'Good' : ''} ${this.getTimeOfDay()}, ${userNameStore}.`;
+  }
+
+  getTime() {
+    setTimeout(() => {
+      const today = new Date();
+      const hour = today.getHours();
+      const min = today.getMinutes();
+      const sec = today.getSeconds();
+    
+      this.time.textContent = `${this.addZero(hour)}:${this.addZero(min)}:${this.addZero(sec)}`;
+
+      requestAnimationFrame(this.getTime());
+    });
+  }
+
+  addZero(n) {
+    return (parseInt(n, 10) < 10 ? '0' : '') + n;
   }
 
   createTemplate(arr) {
