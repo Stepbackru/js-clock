@@ -20,4 +20,8 @@
 .date__greating {
   text-align: center;
 }
+
+.date__today {
+  text-transform: capitalize;
+}
 /*# sourceMappingURL=showDateGreating.css.map */
