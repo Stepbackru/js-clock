@@ -36,7 +36,7 @@ class ClockModal {
       this.sc.style.transform = `rotateZ(${secs}deg)`;
 
       requestAnimationFrame(this.subscribe);
-    })
+    }, 1000)
 
   }
 

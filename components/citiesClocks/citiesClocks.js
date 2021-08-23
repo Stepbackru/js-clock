@@ -45,7 +45,7 @@ class CityClocks {
       })
 
       requestAnimationFrame(this.subscribe);
-    })
+    }, 1000)
 
   }
 
