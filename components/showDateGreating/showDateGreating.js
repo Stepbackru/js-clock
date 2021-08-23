@@ -8,6 +8,8 @@ class ShowDateGreating {
     this.greating = null;
     this.time = null;
     this.today = null;
+
+    this.getTime = this.getTime.bind(this);
   }
 
   render() {
@@ -89,8 +91,8 @@ class ShowDateGreating {
     
       this.time.textContent = `${this.addZero(hour)}:${this.addZero(min)}:${this.addZero(sec)}`;
 
-      requestAnimationFrame(this.getTime());
-    });
+      requestAnimationFrame(this.getTime);
+    }, 1000);
   }
 
   addZero(n) {
