@@ -76,7 +76,8 @@ class ShowDateGreating {
     const userNameStore = localStorage.getItem(`username`);
 
     this.greating.textContent = 
-    `${langStore === 'en' ? 'Good' : ''} ${this.getTimeOfDay()}, ${userNameStore}.`;
+    `${langStore === 'en' ? 'Good' : ''} ${this.getTimeOfDay()}${userNameStore ? 
+      `, ${userNameStore}` : ''}.`;
   }
 
   getTime() {
