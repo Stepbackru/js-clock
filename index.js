@@ -3,6 +3,7 @@ import cityBlock from './components/cityBlock.js';
 import citiesClocks from './components/citiesClocks/citiesClocks.js';
 import showDateGreating from './components/showDateGreating/showDateGreating.js';
 import setUserName from './components/setUserName/setUserName.js';
+import setLangApp from './components/setLangApp/setLangApp.js';
 
 class MainPage {
   constructor() {
@@ -11,8 +12,9 @@ class MainPage {
   
   render() {
     cityBlock.render();
-    mainClocks.render();
     citiesClocks.render();
+    mainClocks.render();
+    setLangApp.render();
     showDateGreating.render();
 
     if (!this.userNameStore) {
@@ -23,6 +25,7 @@ class MainPage {
   subscribe() {
     mainClocks.subscribe();
     citiesClocks.subscribe();
+    setLangApp.subscribe();
     showDateGreating.subscribe();
 
     if (!this.userNameStore) {
