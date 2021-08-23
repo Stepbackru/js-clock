@@ -9,7 +9,7 @@ class ClockModal {
     this.mn = null;
     this.sc = null;
 
-    this.subscribe = this.subscribe.bind(this);
+    this.setAnimationClocks = this.setAnimationClocks.bind(this);
   }
 
   render() {
@@ -25,19 +25,21 @@ class ClockModal {
   }
 
   subscribe() {
-    setTimeout(() => {
-      const day = new Date();
-      const hours = day.getHours() * 30;
-      const mins = day.getMinutes() * this.deg;
-      const secs = day.getSeconds() * this.deg;
+    this.setAnimationClocks();
+    setTimeout(this.setAnimationClocks, 1000);
+  }
 
-      this.hr.style.transform = `rotateZ(${(hours) + (mins/12)}deg)`;
-      this.mn.style.transform = `rotateZ(${mins}deg)`;
-      this.sc.style.transform = `rotateZ(${secs}deg)`;
+  setAnimationClocks() {
+    const day = new Date();
+    const hours = day.getHours() * 30;
+    const mins = day.getMinutes() * this.deg;
+    const secs = day.getSeconds() * this.deg;
 
-      requestAnimationFrame(this.subscribe);
-    }, 1000)
+    this.hr.style.transform = `rotateZ(${(hours) + (mins/12)}deg)`;
+    this.mn.style.transform = `rotateZ(${mins}deg)`;
+    this.sc.style.transform = `rotateZ(${secs}deg)`;
 
+    requestAnimationFrame(this.setAnimationClocks);
   }
 
   // private unsubscribe(): void  {
