@@ -11,7 +11,7 @@ class CityClocks {
     this.sc = [];
     this.flag = [];
 
-    this.subscribe = this.subscribe.bind(this);
+    this.setAnimationClocks = this.setAnimationClocks.bind(this);
   }
 
   render() {
@@ -31,22 +31,39 @@ class CityClocks {
     });
   }
   
-  subscribe() {
-    setTimeout(() => {
-      cities.forEach((el, i) => {
-        const day = new Date();
-        const hours = (day.getUTCHours() + el.utcTime) * 30;
-        const mins = day.getMinutes() * this.deg;
-        const secs = day.getSeconds() * this.deg;
+  destroy(){
+    this.elements.forEach((arr) => {
+      arr.forEach((el) => el.remove());
+    });
+    this.elements = [];
+    this.hr = [];
+    this.mn = [];
+    this.sc = [];
+    this.flag = [];
+  }
   
-        this.hr[i].style.transform = `rotateZ(${(hours) + (mins/12)}deg)`;
-        this.mn[i].style.transform = `rotateZ(${mins}deg)`;
-        this.sc[i].style.transform = `rotateZ(${secs}deg)`;
-      })
+  subscribe() {
+    this.setAnimationClocks();
+    setTimeout(this.setAnimationClocks, 1000);
+  }
 
-      requestAnimationFrame(this.subscribe);
-    }, 1000)
+  setAnimationClocks() {
+    cities.forEach((el, i) => {
+      const day = new Date();
+      const hours = (day.getUTCHours() + el.utcTime) * 30;
+      const mins = day.getMinutes() * this.deg;
+      const secs = day.getSeconds() * this.deg;
 
+      this.hr[i].style.transform = `rotateZ(${(hours) + (mins/12)}deg)`;
+      this.mn[i].style.transform = `rotateZ(${mins}deg)`;
+      this.sc[i].style.transform = `rotateZ(${secs}deg)`;
+    })
+
+    if (this.hr[0]) {
+      requestAnimationFrame(this.setAnimationClocks);
+    } else {
+      requestAnimationFrame();
+    }
   }
 
   createTemplate(arr) {
