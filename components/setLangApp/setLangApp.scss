@@ -1,10 +1,6 @@
 .lang {
   display: flex;
   gap: 20px;
-  position: absolute;
-  bottom: 15%;
-  left: 50%;
-  transform: translate3d(-50%, 0, 0);
 
   &__btn {
     width: 80px;

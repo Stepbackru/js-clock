@@ -1,0 +1,173 @@
+.clock {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.clock__wrapper {
+  width: 350px;
+  height: 350px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: url(./assets/image/clock.png), url(./assets/image/js.png), radial-gradient(circle, #25495a 0%, #19303c 11%, #091921 38%);
+  background-size: cover;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 -15px 15px rgba(134, 134, 134, 0.35), inset 0 -15px 15px #191919, 0 15px 15px rgba(163, 162, 162, 0.35), inset 0 15px 15px #191919;
+          box-shadow: 0 -15px 15px rgba(134, 134, 134, 0.35), inset 0 -15px 15px #191919, 0 15px 15px rgba(163, 162, 162, 0.35), inset 0 15px 15px #191919;
+}
+
+@media (max-width: 520px) {
+  .clock__wrapper {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+@media (max-height: 858px) {
+  .clock__wrapper {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+.clock__wrapper:before {
+  content: '';
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  z-index: 999;
+}
+
+@media (max-height: 858px) {
+  .clock__wrapper:before {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+.clock__hour,
+.clock__min,
+.clock__sec {
+  position: absolute;
+}
+
+.clock__hour,
+.clock__arrow-hr {
+  width: 160px;
+  height: 160px;
+}
+
+@media (max-height: 858px) {
+  .clock__hour,
+  .clock__arrow-hr {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+.clock__min,
+.clock__arrow-mn {
+  width: 190px;
+  height: 190px;
+}
+
+@media (max-height: 858px) {
+  .clock__min,
+  .clock__arrow-mn {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+.clock__sec,
+.clock__arrow-sc {
+  width: 230px;
+  height: 230px;
+}
+
+@media (max-height: 858px) {
+  .clock__sec,
+  .clock__arrow-sc {
+    width: 190px;
+    height: 190px;
+  }
+}
+
+.clock__arrow-hr,
+.clock__arrow-mn,
+.clock__arrow-sc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.clock__arrow-hr:before {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 80px;
+  background-color: #ffc600;
+  z-index: 10;
+  border-radius: 6px 6px 0 0;
+}
+
+@media (max-height: 858px) {
+  .clock__arrow-hr:before {
+    width: 4px;
+    height: 60px;
+  }
+}
+
+.clock__arrow-mn:before {
+  content: '';
+  position: absolute;
+  width: 4px;
+  height: 90px;
+  background-color: #fff;
+  z-index: 11;
+  border-radius: 6px 6px 0 0;
+}
+
+@media (max-height: 858px) {
+  .clock__arrow-mn:before {
+    width: 2px;
+    height: 70px;
+  }
+}
+
+.clock__arrow-sc:before {
+  content: '';
+  position: absolute;
+  width: 2px;
+  height: 150px;
+  background-color: #fff;
+  z-index: 12;
+  border-radius: 6px 6px 0 0;
+}
+
+@media (max-height: 858px) {
+  .clock__arrow-sc:before {
+    height: 110px;
+  }
+}
+/*# sourceMappingURL=mainClocks.css.map */

@@ -2,7 +2,7 @@ const langBlockTemplate = [
   {
     el: 'div',
     classNames: 'lang',
-    parent: 'body',
+    parent: 'app',
     child: [
       {
         el: 'button',

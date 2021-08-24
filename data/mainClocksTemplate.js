@@ -3,7 +3,7 @@ const mainClocksTemplate = (theme) => {
     {
       el: 'div',
       classNames: 'clock',
-      parent: 'body',
+      parent: 'app',
       child: [
         {
           el: 'div',

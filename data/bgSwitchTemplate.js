@@ -2,7 +2,7 @@ const bgSwitchTemplate = [
   {
     el: 'div',
     classNames: 'switcher',
-    parent: 'body',
+    parent: 'app',
     child: [
       {
         el: 'input',

@@ -2,7 +2,7 @@ const showDateTemplate =  [
   {
     el: 'div',
     classNames: 'date',
-    parent: 'body',
+    parent: 'app',
     child: [
       {
         el: 'p',

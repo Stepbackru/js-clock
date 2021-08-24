@@ -1,16 +1,22 @@
 .date {
-  position: absolute;
-  bottom: 3%;
-  left: 50%;
-  transform: translate3d(-50%, 0, 0);
   color: #ffffff;
   font-size: 24px;
   font-weight: 300;
+
+  @media (max-height: 858px) {
+    font-size: 18px;
+  }
 
   &__wrapper {
     padding-top: 10px;
     display: flex;
     gap: 10px;
+
+    
+    @media (max-width: 520px) {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   &__greating {

@@ -3,11 +3,6 @@
   display: -ms-flexbox;
   display: flex;
   gap: 20px;
-  position: absolute;
-  bottom: 15%;
-  left: 50%;
-  -webkit-transform: translate3d(-50%, 0, 0);
-          transform: translate3d(-50%, 0, 0);
 }
 
 .lang__btn {

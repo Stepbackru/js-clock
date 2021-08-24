@@ -1,11 +1,3 @@
-.switcher {
-  position: absolute;
-  bottom: 10%;
-  left: 50%;
-  -webkit-transform: translate3d(-50%, 0, 0);
-          transform: translate3d(-50%, 0, 0);
-}
-
 .switcher__checkbox {
   display: none;
 }

@@ -1,11 +1,10 @@
-import mainClocks from './components/mainClocks.js';
+import mainClocks from './components/mainClocks/mainClocks.js';
 import cityBlock from './components/cityBlock.js';
 import citiesClocks from './components/citiesClocks/citiesClocks.js';
 import showDateGreating from './components/showDateGreating/showDateGreating.js';
 import setUserName from './components/setUserName/setUserName.js';
 import setLangApp from './components/setLangApp/setLangApp.js';
 import bgSwitcher from './components/bgSwitcher/bgSwitcher.js';
-import spaceTheme from './assets/templates/space/spaceTheme.js';
 
 class MainPage {
   constructor() {
@@ -13,11 +12,11 @@ class MainPage {
   }
   
   render() {
-    bgSwitcher.render();
     cityBlock.render();
     citiesClocks.render();
     mainClocks.render();
     setLangApp.render();
+    bgSwitcher.render();
     showDateGreating.render();
 
     if (!this.userNameStore) {

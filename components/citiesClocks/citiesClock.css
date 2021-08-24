@@ -1,11 +1,6 @@
 .cities {
+  padding-top: 5px;
   max-width: 1200px;
-  height: 300px;
-  position: absolute;
-  top: 10%;
-  left: 50%;
-  -webkit-transform: translate3d(-50%, 0, 0);
-          transform: translate3d(-50%, 0, 0);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -25,9 +20,16 @@
   }
 }
 
+@media (max-width: 767px) {
+  .cities {
+    max-width: 360px;
+    overflow-x: hidden;
+  }
+}
+
 @media (max-width: 520px) {
   .cities {
-    max-width: 160px;
+    max-width: 130px;
     overflow-x: hidden;
   }
 }
@@ -58,9 +60,23 @@
           box-shadow: 0 2px 10px rgba(134, 134, 134, 0.35), inset 0 -10px 10px #191919, 0 -1px 5px rgba(163, 162, 162, 0.35), inset 0 10px 10px #191919;
 }
 
+@media (max-height: 719px), (max-width: 767px) {
+  .cities .clock__wrapper {
+    width: 100px;
+    height: 100px;
+  }
+}
+
 .cities .clock__wrapper::before {
   width: 8px;
   height: 8px;
+}
+
+@media (max-height: 719px), (max-width: 767px) {
+  .cities .clock__wrapper::before {
+    width: 6px;
+    height: 6px;
+  }
 }
 
 .cities .clock__flag {
@@ -78,10 +94,24 @@
   background-repeat: no-repeat;
 }
 
+@media (max-height: 719px), (max-width: 767px) {
+  .cities .clock__flag {
+    width: 30px;
+    height: 17px;
+  }
+}
+
 .cities .clock__hour, .cities .clock__arrow-hr {
   width: 80px;
   height: 80px;
   z-index: 10;
+}
+
+@media (max-height: 719px), (max-width: 767px) {
+  .cities .clock__hour, .cities .clock__arrow-hr {
+    width: 50px;
+    height: 50px;
+  }
 }
 
 .cities .clock__min, .cities .clock__arrow-mn {
@@ -90,10 +120,24 @@
   z-index: 11;
 }
 
+@media (max-height: 719px), (max-width: 767px) {
+  .cities .clock__min, .cities .clock__arrow-mn {
+    width: 70px;
+    height: 70px;
+  }
+}
+
 .cities .clock__sec, .cities .clock__arrow-sc {
   width: 130px;
   height: 130px;
   z-index: 12;
+}
+
+@media (max-height: 719px), (max-width: 767px) {
+  .cities .clock__sec, .cities .clock__arrow-sc {
+    width: 80px;
+    height: 80px;
+  }
 }
 
 .cities .clock__arrow-hr:before {
@@ -101,9 +145,22 @@
   height: 40px;
 }
 
+@media (max-height: 719px), (max-width: 767px) {
+  .cities .clock__arrow-hr:before {
+    width: 2px;
+    height: 20px;
+  }
+}
+
 .cities .clock__arrow-mn:before {
   width: 2px;
   height: 50px;
+}
+
+@media (max-height: 719px), (max-width: 767px) {
+  .cities .clock__arrow-mn:before {
+    height: 35px;
+  }
 }
 
 .cities .clock__arrow-sc:before {
@@ -111,8 +168,14 @@
   height: 80px;
 }
 
+@media (max-height: 719px), (max-width: 767px) {
+  .cities .clock__arrow-sc:before {
+    height: 40px;
+  }
+}
+
 .cities .info {
-  margin-top: -50px;
+  padding-top: 20px;
 }
 
 .cities .info__item {
@@ -122,5 +185,11 @@
 
 .cities .info__country {
   font-size: 14px;
+}
+
+@media (max-height: 719px) {
+  .cities .info__country {
+    font-size: 10px;
+  }
 }
 /*# sourceMappingURL=citiesClock.css.map */

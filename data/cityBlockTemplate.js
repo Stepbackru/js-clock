@@ -2,7 +2,7 @@ const cityBlockTemplate = [
   {
     el: 'div',
     classNames: 'cities',
-    parent: 'body',
+    parent: 'app',
   },
 ];
 
