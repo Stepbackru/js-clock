@@ -42,7 +42,8 @@ class ShowDateGreating {
     const today = new Date();
     const dayMonth = {
       day: 'numeric',
-      month: 'long'
+      month: 'long',
+      year: 'numeric'
     };
     const dayOfWeek = {
       weekday: 'long'
