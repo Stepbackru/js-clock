@@ -4,6 +4,8 @@ import citiesClocks from './components/citiesClocks/citiesClocks.js';
 import showDateGreating from './components/showDateGreating/showDateGreating.js';
 import setUserName from './components/setUserName/setUserName.js';
 import setLangApp from './components/setLangApp/setLangApp.js';
+import bgSwitcher from './components/bgSwitcher/bgSwitcher.js';
+import spaceTheme from './assets/templates/space/spaceTheme.js';
 
 class MainPage {
   constructor() {
@@ -11,6 +13,7 @@ class MainPage {
   }
   
   render() {
+    bgSwitcher.render();
     cityBlock.render();
     citiesClocks.render();
     mainClocks.render();
@@ -23,6 +26,7 @@ class MainPage {
   }
 
   subscribe() {
+    bgSwitcher.subscribe();
     mainClocks.subscribe();
     citiesClocks.subscribe();
     setLangApp.subscribe();

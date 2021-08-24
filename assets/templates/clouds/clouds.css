@@ -1,0 +1,9 @@
+.clouds {
+  width: 100%;
+  min-height: 100%;
+  position: absolute;
+  background-color: #FD940A;
+  background-image: radial-gradient(circle, #F9A72B 0%, #FA9026 70%, #FB6C1F 100%);
+  z-index: -1;
+}
+/*# sourceMappingURL=clouds.css.map */

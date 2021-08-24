@@ -52,7 +52,7 @@ class CreateElement {
         }
 
         // eslint-disable-next-line max-len
-        if (attrName.match(/value|id|placeholder|type|pattern|autocomplete|href|action/)) {
+        if (attrName.match(/value|for|id|placeholder|type|pattern|autocomplete|href|action/)) {
           element.setAttribute(attrName, attrValue);
         } else if (attrValue !== '') {
           element.dataset[attrName] = attrValue;
