@@ -10,6 +10,7 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  position: absolute;
   background: rgba(0, 0, 0, 0.7);
   -webkit-transition: opacity .3s;
   transition: opacity .3s;

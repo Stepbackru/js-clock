@@ -7,7 +7,7 @@ const setUserNameTemplate = () => {
     {
       el: 'div',
       classNames: 'name',
-      parent: 'app',
+      parent: 'body',
       child: [
         {
           el: 'div',
